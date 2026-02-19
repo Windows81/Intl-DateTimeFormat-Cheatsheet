@@ -66,14 +66,14 @@
 		To reproduce, run:
 		curl "https://github.com/chromium/chromium/raw/refs/heads/main/third_party/google-closure-library/closure/goog/i18n/datetimesymbols.js" -L | \
 		grep -Po "(?<=\* Date/time formatting symbols for locale )[\w_]+" | \
-		awk '{ print "<option value=\""$0"\">"$0"</option>" }'
+		sed s/_/-/ | awk '{ print "<option value=\""$0"\">"$0"</option>" }'
 		-->
-		<option value="en_ISO">en_ISO</option>
+		<!-- <option value="en-ISO">en-ISO</option> -->
 		<option value="af">af</option>
 		<option value="am">am</option>
 		<option value="ar">ar</option>
-		<option value="ar_DZ">ar_DZ</option>
-		<option value="ar_EG">ar_EG</option>
+		<option value="ar-DZ">ar-DZ</option>
+		<option value="ar-EG">ar-EG</option>
 		<option value="az">az</option>
 		<option value="be">be</option>
 		<option value="bg">bg</option>
@@ -86,30 +86,30 @@
 		<option value="cy">cy</option>
 		<option value="da">da</option>
 		<option value="de">de</option>
-		<option value="de_AT">de_AT</option>
-		<option value="de_CH">de_CH</option>
+		<option value="de-AT">de-AT</option>
+		<option value="de-CH">de-CH</option>
 		<option value="el">el</option>
 		<option value="en">en</option>
-		<option value="en_AU">en_AU</option>
-		<option value="en_CA">en_CA</option>
-		<option value="en_GB">en_GB</option>
-		<option value="en_IE">en_IE</option>
-		<option value="en_IN">en_IN</option>
-		<option value="en_SG">en_SG</option>
-		<option value="en_US">en_US</option>
-		<option value="en_ZA">en_ZA</option>
+		<option value="en-AU">en-AU</option>
+		<option value="en-CA">en-CA</option>
+		<option value="en-GB">en-GB</option>
+		<option value="en-IE">en-IE</option>
+		<option value="en-IN">en-IN</option>
+		<option value="en-SG">en-SG</option>
+		<option value="en-US">en-US</option>
+		<option value="en-ZA">en-ZA</option>
 		<option value="es">es</option>
-		<option value="es_419">es_419</option>
-		<option value="es_ES">es_ES</option>
-		<option value="es_MX">es_MX</option>
-		<option value="es_US">es_US</option>
+		<option value="es-419">es-419</option>
+		<option value="es-ES">es-ES</option>
+		<option value="es-MX">es-MX</option>
+		<option value="es-US">es-US</option>
 		<option value="et">et</option>
 		<option value="eu">eu</option>
 		<option value="fa">fa</option>
 		<option value="fi">fi</option>
 		<option value="fil">fil</option>
 		<option value="fr">fr</option>
-		<option value="fr_CA">fr_CA</option>
+		<option value="fr-CA">fr-CA</option>
 		<option value="ga">ga</option>
 		<option value="gl">gl</option>
 		<option value="gsw">gsw</option>
@@ -148,13 +148,13 @@
 		<option value="ne">ne</option>
 		<option value="nl">nl</option>
 		<option value="no">no</option>
-		<option value="no_NO">no_NO</option>
+		<option value="no-NO">no-NO</option>
 		<option value="or">or</option>
 		<option value="pa">pa</option>
 		<option value="pl">pl</option>
 		<option value="pt">pt</option>
-		<option value="pt_BR">pt_BR</option>
-		<option value="pt_PT">pt_PT</option>
+		<option value="pt-BR">pt-BR</option>
+		<option value="pt-PT">pt-PT</option>
 		<option value="ro">ro</option>
 		<option value="ru">ru</option>
 		<option value="sh">sh</option>
@@ -163,7 +163,7 @@
 		<option value="sl">sl</option>
 		<option value="sq">sq</option>
 		<option value="sr">sr</option>
-		<option value="sr_Latn">sr_Latn</option>
+		<option value="sr-Latn">sr-Latn</option>
 		<option value="sv">sv</option>
 		<option value="sw">sw</option>
 		<option value="ta">ta</option>
@@ -176,10 +176,11 @@
 		<option value="uz">uz</option>
 		<option value="vi">vi</option>
 		<option value="zh">zh</option>
-		<option value="zh_CN">zh_CN</option>
-		<option value="zh_HK">zh_HK</option>
-		<option value="zh_TW">zh_TW</option>
+		<option value="zh-CN">zh-CN</option>
+		<option value="zh-HK">zh-HK</option>
+		<option value="zh-TW">zh-TW</option>
 		<option value="zu">zu</option>
+
 	</select>
 	<span id="resolvedLocaleContainer" style="display: none;">
 		, resolved locale: <span id="resolvedLocaleBlock"></span>
